@@ -8,8 +8,6 @@
         <artifactId>kafka</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-    <groupId>org.example</groupId>
     <artifactId>kafka-producer</artifactId>
     <dependencies>
         <dependency>
@@ -32,6 +30,8 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
+
+
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-avro-serializer</artifactId>

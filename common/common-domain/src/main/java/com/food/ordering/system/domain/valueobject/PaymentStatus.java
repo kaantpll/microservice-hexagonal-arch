@@ -1,4 +1,4 @@
-package com.food.ordering.system.domain.entity.valueobject;
+package com.food.ordering.system.domain.valueobject;
 
 public enum PaymentStatus {
     COMPLETED,CANCELLED,FAILED

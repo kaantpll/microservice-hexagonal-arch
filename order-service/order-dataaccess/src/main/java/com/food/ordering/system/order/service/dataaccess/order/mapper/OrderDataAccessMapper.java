@@ -2,7 +2,7 @@ package com.food.ordering.system.order.service.dataaccess.order.mapper;
 
 
 
-import com.food.ordering.system.domain.entity.valueobject.*;
+import com.food.ordering.system.domain.valueobject.*;
 import com.food.ordering.system.order.service.dataaccess.order.entity.OrderAddressEntity;
 import com.food.ordering.system.order.service.dataaccess.order.entity.OrderEntity;
 import com.food.ordering.system.order.service.dataaccess.order.entity.OrderItemEntity;

@@ -1,12 +1,10 @@
 package com.food.ordering.system.order.service.domain.entity;
 
 
-import com.food.ordering.system.domain.entity.entity.BaseEntity;
-import com.food.ordering.system.domain.entity.valueobject.Money;
-import com.food.ordering.system.domain.entity.valueobject.OrderId;
+import com.food.ordering.system.domain.entity.BaseEntity;
+import com.food.ordering.system.domain.valueobject.Money;
+import com.food.ordering.system.domain.valueobject.OrderId;
 import com.food.ordering.system.order.service.domain.valueobject.OrderItemId;
-
-import java.util.UUID;
 
 public class OrderItem extends BaseEntity<OrderItemId> {
     private OrderId orderId;

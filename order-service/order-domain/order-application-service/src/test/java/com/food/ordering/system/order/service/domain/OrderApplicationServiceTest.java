@@ -1,6 +1,6 @@
 package com.food.ordering.system.order.service.domain;
 
-import com.food.ordering.system.domain.entity.valueobject.*;
+import com.food.ordering.system.domain.valueobject.*;
 import com.food.ordering.system.order.service.domain.dto.create.CreateOrderCommand;
 import com.food.ordering.system.order.service.domain.dto.create.CreateOrderResponse;
 import com.food.ordering.system.order.service.domain.dto.create.OrderAddress;

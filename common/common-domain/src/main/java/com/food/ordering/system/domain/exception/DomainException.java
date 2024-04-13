@@ -1,4 +1,4 @@
-package com.food.ordering.system.domain.entity.exception;
+package com.food.ordering.system.domain.exception;
 
 public class DomainException extends RuntimeException{
     public DomainException(String message) {
