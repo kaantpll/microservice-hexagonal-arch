@@ -67,6 +67,7 @@
             <dependency>
                 <groupId>com.food.ordering.system</groupId>
                 <artifactId>common-application</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
 
