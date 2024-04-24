@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: food_orderDb
+    volumes:
+      - ./data:/var/lib/postgresql/data9
+    ports:
+      - "5432:5432"

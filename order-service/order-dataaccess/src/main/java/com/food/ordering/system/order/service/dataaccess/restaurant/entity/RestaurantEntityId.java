@@ -2,7 +2,6 @@ package com.food.ordering.system.order.service.dataaccess.restaurant.entity;
 
 import lombok.*;
 
-import javax.persistence.IdClass;
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;

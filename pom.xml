@@ -7,25 +7,26 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.7</version>
+        <version>3.0.0</version>
         <relativePath/>
     </parent>
 
     <groupId>com.food.ordering.system</groupId>
     <artifactId>food-ordering-system</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <packaging>pom</packaging>
+
     <modules>
         <module>order-service</module>
-        <module>common</module>
+        <module>common</module> <module>infrastructure</module>
+        <module>customer-service</module>
     </modules>
 
     <properties>
 
         <maven-compiler-plugin.version>3.9.0</maven-compiler-plugin.version>
-        <mockito-version>4.8.1</mockito-version>
-        <kafka-avro-serializer.version>7.0.1</kafka-avro-serializer.version>
+        <mockito-version>5.0.0</mockito-version>
+        <kafka-avro-serializer.version>7.6.0</kafka-avro-serializer.version>
         <avro.version>1.11.0</avro.version>
     </properties>
 

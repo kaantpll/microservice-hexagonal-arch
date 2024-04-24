@@ -64,6 +64,7 @@ public class OrderCreateHelper {
     }
 
     private void checkCustomer(UUID customerId) {
+
         Optional<Customer> customer =  customerRepository.findCustomer(customerId);
 
         if(customer.isEmpty()){
