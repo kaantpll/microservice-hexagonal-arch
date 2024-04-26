@@ -24,26 +24,24 @@ import java.util.UUID;
 public class OrderCreateCommandHandler {
 
     private final OrderCreateHelper orderCreateHelper;
+
     private final OrderDataMapper orderDataMapper;
 
+    private final OrderCreatedPaymentRequestMessagePublisher orderCreatedPaymentRequestMessagePublisher;
 
-    public OrderCreateCommandHandler(OrderCreateHelper orderCreateHelper,  OrderDataMapper orderDataMapper) {
+    public OrderCreateCommandHandler(OrderCreateHelper orderCreateHelper,
+                                     OrderDataMapper orderDataMapper,
+                                     OrderCreatedPaymentRequestMessagePublisher orderCreatedPaymentRequestMessagePublisher) {
         this.orderCreateHelper = orderCreateHelper;
         this.orderDataMapper = orderDataMapper;
+        this.orderCreatedPaymentRequestMessagePublisher = orderCreatedPaymentRequestMessagePublisher;
     }
 
-
-    public CreateOrderResponse createOrder(CreateOrderCommand createOrderCommand){
-
-
-        OrderCreatedEvent orderCreateEvent = orderCreateHelper.persistOrder(createOrderCommand);
-
-        log.info("Order is created with id: {}",orderCreateEvent.getOrder().getId().getValue());
-
-        //orderCreatedPaymentRequestMessagePublisher.publish(orderCreateEvent);
-
-        return orderDataMapper.orderToCreateOrderResponse(orderCreateEvent.getOrder(),"Order Created Successfully");
+    public CreateOrderResponse createOrder(CreateOrderCommand createOrderCommand) {
+        OrderCreatedEvent orderCreatedEvent = orderCreateHelper.persistOrder(createOrderCommand);
+        log.info("Order is created with id: {}", orderCreatedEvent.getOrder().getId().getValue());
+        orderCreatedPaymentRequestMessagePublisher.publish(orderCreatedEvent);
+        return orderDataMapper.orderToCreateOrderResponse(orderCreatedEvent.getOrder(),
+                "Order created successfully");
     }
-
-
 }

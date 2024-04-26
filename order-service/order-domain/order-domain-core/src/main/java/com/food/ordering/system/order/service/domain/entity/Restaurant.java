@@ -1,5 +1,4 @@
 package com.food.ordering.system.order.service.domain.entity;
-
 import com.food.ordering.system.domain.entity.AggregateRoot;
 import com.food.ordering.system.domain.valueobject.RestaurantId;
 
@@ -19,7 +18,6 @@ public class Restaurant extends AggregateRoot<RestaurantId> {
         return new Builder();
     }
 
-
     public List<Product> getProducts() {
         return products;
     }
@@ -28,7 +26,6 @@ public class Restaurant extends AggregateRoot<RestaurantId> {
         return active;
     }
 
-
     public static final class Builder {
         private RestaurantId restaurantId;
         private List<Product> products;
@@ -36,8 +33,6 @@ public class Restaurant extends AggregateRoot<RestaurantId> {
 
         private Builder() {
         }
-
-
 
         public Builder restaurantId(RestaurantId val) {
             restaurantId = val;

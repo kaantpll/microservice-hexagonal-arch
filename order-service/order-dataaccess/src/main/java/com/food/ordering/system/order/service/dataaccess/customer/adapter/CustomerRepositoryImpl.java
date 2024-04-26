@@ -13,6 +13,7 @@ import java.util.UUID;
 @Component
 public class CustomerRepositoryImpl implements CustomerRepository {
 
+
     private final CustomerJpaRepository customerJpaRepository;
     private final CustomerDataAccessMapper customerDataAccessMapper;
 
@@ -24,6 +25,5 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 
     @Override
     public Optional<Customer> findCustomer(UUID customerId) {
-        return Optional.empty();
-    }
-}
+        return customerJpaRepository.findById(customerId).map(customerDataAccessMapper::customerEntityToCustomer);
+    }}
