@@ -3,7 +3,7 @@
 ## Project Description
 This project involves the implementation of **Domain-Driven Design (DDD)** and **Hexagonal Architecture** principles using **Spring Boot**. Technologies used in this project include **Java**, **Docker**, and **PostgreSQL**.
 ##
-In this project, the Hexagonal Architecture & DDD course by Ali Gelen was followed.
+In this project, the Hexagonal Architecture & DDD udemy course by Ali Gelenler was followed.
 
 ## Objectives
 - Manage complex business rules and processes with Domain-Driven Design (DDD)
