@@ -28,7 +28,7 @@ The project is structured following Hexagonal Architecture principles, ensuring 
 - Data Transfer Objects (DTOs)
 
 ### Infrastructure Layer
-- Persistence using Kafka
+- Distrubeted events using Kafka
 - Docker configuration for containerization
 - Integration with external services
 
